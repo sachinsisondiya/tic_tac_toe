@@ -3,33 +3,67 @@
   padding: 0px;
 }
 body{
+text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 10px;
+  justify-content: space-around;
+  margin: 10px auto;
   padding: 10px;
   width: 100vw;
   height: 100vh;
+  background-color: #82968C;
+
+}
+h1{
+  border-radius: 5px;
+  margin: 0px;
+  padding: 5px 20px;
+
+    font-family: "Saira", sans-serif;
+  font-weight: 700;
   
+  color: #F44E3F;
+  background-color: #292929;
+  
+  font-size: 50px;
+  transition: all 0.4s ease-in-out;;
+}
+h1:hover{
+  background-color: #F44E3F;
+  color: #292929;
+  transform: scale(1.03);
 }
 main{
+  background-color: #6A706E;
+  width:80% ;
+  min-height: 40rem;
+ 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 1px solid #9b2828;
-  width: 30rem;
-  height: 30rem;
+ 
+  
 }
 .container{
+  width: 30rem;
+  height: 30rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #160f13;
+  border-radius:5px;
+  padding: 5px;
+  
+ 
 }
 .box{
+  
+  font-size: 6rem;
+  color: black;
   border: none;
   border-radius: 1rem;
 
@@ -41,4 +75,54 @@ main{
 .box:hover{
   transform: scale(0.9);
 
+}
+.box-click{
+   font-size: 6rem;
+  color: rgb(185, 19, 19);
+  border: none;
+  border-radius: 1rem;
+
+  margin: 5px;
+  height: 9rem;
+  width: 9rem;
+
+}
+#reset, #start{
+  border: none;
+  border-radius: 5px;
+  padding: 20px 50px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+.new{
+  height: 15rem;
+  width: 20rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6A706E;
+}
+#reset{
+  background-color:#A7C957 ;
+  color: #292929;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+#reset:hover{
+  background-color: #292929;
+  color: #A7C957;
+  transform: scale(1.03);
+}
+#start{
+  background-color: #87255B;
+  color: #fff; ;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+#start:hover{
+  background-color:#BBA0CA;
+  color: #160f13;
+   transform: scale(1.03);
 }

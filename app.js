@@ -1,9 +1,12 @@
 let boxes = document.querySelectorAll(".box")
-console.log(boxes)
+let btnReset =document.getElementById("reset")
+console.log(btnReset)
+let btnStart = document.getElementById("start")
 
 let patterns= [[0,1,2], [0,3,6], [0,4,8],[1,4,7] , [2,5,8] , [2,4,6],[3,4,5],[6,7,8]]
 
 let playerTurn = true;
+let count=0;
 
 for(let i=0;i<boxes.length;i++){
  
@@ -11,17 +14,25 @@ for(let i=0;i<boxes.length;i++){
       if(playerTurn){
        boxes[i].innerHTML="x"
        playerTurn=false
+     
        
       }
       else{
         boxes[i].innerHTML="o"
         playerTurn=true
+       
       }
       boxes[i].disabled=true;
+      count++;
       checkWinner();
- 
+      if(count=== 9 && !checkWinner()){
+        gameDraw();
+      }
   }
 )
+}
+function gameDraw(){
+  console.log("Game Draw")
 }
 
 function checkWinner(){
@@ -35,7 +46,7 @@ function checkWinner(){
       if(a === b && b === c){
          console.log("winner is" +a)
 
-         for(let i=0;i,boxes.length;i++){
+         for(let i=0;i<boxes.length;i++){
           boxes[i].disabled=true;
          }
         
@@ -43,4 +54,17 @@ function checkWinner(){
     }
   }
 }
+const resetGame = function(){
+   playerTurn=true;
+  count=0;
+  for(let i=0;i<boxes.length;i++){
+    boxes[i].disabled=false;
+    boxes[i].innerHTML="";
+    
+    }
 
+}
+
+btnReset.addEventListener('click', resetGame)
+
+btnStart.addEventListener('click',resetGame)
