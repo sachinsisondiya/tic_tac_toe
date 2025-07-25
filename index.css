@@ -74,9 +74,10 @@ main{
 }
 .box:hover{
   transform: scale(0.9);
-
+cursor: pointer;
 }
 .box-click{
+   
    font-size: 6rem;
   color: rgb(185, 19, 19);
   border: none;
@@ -86,6 +87,9 @@ main{
   height: 9rem;
   width: 9rem;
 
+}
+#reset:disabled,#start:disabled{
+ display: none;
 }
 #reset, #start{
   border: none;
@@ -104,6 +108,7 @@ main{
   justify-content: space-between;
   background-color: #6A706E;
 }
+
 #reset{
   background-color:#A7C957 ;
   color: #292929;
@@ -111,18 +116,36 @@ main{
   transition: all 0.4s ease-in-out;
 }
 #reset:hover{
+  cursor: pointer;
   background-color: #292929;
   color: #A7C957;
   transform: scale(1.03);
 }
 #start{
   background-color: #87255B;
-  color: #fff; ;
+  color: whitesmoke; ;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
 }
 #start:hover{
+   cursor: pointer;
   background-color:#BBA0CA;
   color: #160f13;
    transform: scale(1.03);
+}
+.wish{
+
+  padding: 5px 5px;
+
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(180, 171, 179);
+  background-color: #160f13;
+}
+span{
+  font-size:2.5rem ;
+  color: #F44E3F;
 }
